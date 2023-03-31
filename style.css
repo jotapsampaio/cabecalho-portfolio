@@ -252,7 +252,7 @@ input {
     }
 
     .text__container h2 {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
     }
 
     .text__container h5 {
@@ -366,11 +366,18 @@ input {
 
     .icon {
         position: fixed;
+        right: -21%;
         z-index: 100;
     }
 
     .icon .fa {
         padding: 1.7vw;
+        font-size: 1.5rem;
+        width: 30vw;
+    }
+
+    .icon .fa span {
+        font-size: 1rem;
     }
 
     ::-webkit-scrollbar {
