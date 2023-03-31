@@ -7,18 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:root {
-    --nav-bg-color: #B5927F;
-    --body-bg-color: #EBCDC3;
-    --link-color: #E8DBD5;
-    --color: #CEAA9A;
-    --color2: #DABCB2;
-}
-
 body {
     width: 100%;
     min-height: 100vh;
-    background: var(--body-bg-color);
+    background: lightgrey;
 }
 
 section {
@@ -32,8 +24,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 3rem;
-    background: var(--nav-bg-color);
+    padding: .5rem 3rem;
+    background: #000;
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.274);
     z-index: 1000;
 }
@@ -57,8 +49,8 @@ section {
     display: block;
     text-decoration: none;
     text-transform: uppercase;
-    color: #E8DBD5;
-    font-size: 1.5vw;
+    color: #fff;
+    font-size: 1.3vw;
     letter-spacing: 4px;
 }
 
@@ -84,14 +76,8 @@ section {
 .text__container h2 {
     font-size: 5rem;
     font-weight: 900;
-    line-height: 5rem;
     text-transform: capitalize;
-}
-
-.text__container h2::first-line {
-    color: #fff;
-    letter-spacing: 5px;
-    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.493);
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.411);
 }
 
 .text__container h5 {
@@ -112,12 +98,11 @@ section {
 
 .text__container .button {
     display: inline-block;
-    color: var(--color);
-    background: #fff;
+    color: #fff;
+    background: #000;
     margin-top: 1.5rem;
     font-size: 1.5rem;
     text-decoration: none;
-    text-transform: capitalize;
     letter-spacing: 2px;
     padding: 6px 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.466);
@@ -128,7 +113,8 @@ section {
 .text__container .button:hover {
     letter-spacing: 3px;
     padding: 6px 18px;
-    color: var(--color2);
+    color: gray;
+    background-color: #000000e5;
 }
 
 .image__container {
@@ -140,18 +126,26 @@ section {
     position: relative;
 }
 
-.image__container .image__box {
+.image__container .image__box { 
     position: relative;
     margin-top: 10rem;
-    margin-right: 6rem;
+    margin-right: 8rem;
     z-index: 1;
 }
 
 .image__container .image__box img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding: 40px;
+}
+
+.animation__blob {
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 25vw;
+    height: 25vw;
+    background: #000;
+    animation: animate__blob 8s linear infinite;
 }
 
 .icon {
@@ -162,7 +156,7 @@ section {
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    border-radius: 4px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -171,38 +165,33 @@ section {
 }
 
 .icon .fa {
-    width: 20vw;
+    width: 19vw;
     padding: 1vw;
-    font-size: 2.5vw;
+    font-size: 2vw;
     background: #fff;
     cursor: pointer;
     transition: .5s ease;
 }
 
 .icon .fa:hover {
-    color: var(--color2);
+    color: gray;
     transform: translateX(-11vw);
 }
 
 .icon .fa span {
     position: relative;
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     bottom: .3vw;
     margin-left: 2.5vw;
 }
 
-/* Animação de bolha */
-
-.animation__blob {
-    position: absolute;
-    top: 60%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    width: 35vw;
-    height: 30vw;
-    background: var(--link-color);
-    animation: animate__blob 8s linear infinite;
+.icon a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
 }
+
+/* Animação de bolha */
 
 @keyframes animate__blob {
     0%, 100% {
@@ -234,9 +223,10 @@ input {
 
 /* Responsividade */
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     .text__container h2 {
-        font-size: 4rem;
+        font-size: 3rem;
+        margin-top: 2rem;
     }
 
     .text__container h5 {
@@ -252,20 +242,17 @@ input {
     } 
 
     .animation__blob {
-        width: 60%;
-        height: 30%;
         left: 35%;
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 900px) {
     .logo {
         width: 100px;
     }
 
     .text__container h2 {
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 2.5rem;
     }
 
     .text__container h5 {
@@ -277,18 +264,11 @@ input {
     }
 
     .text__container .button {
-        font-size: .8rem;
+        font-size: .6rem;
     } 
-
-    .animation__blob {
-        width: 30%;
-        height: 20%;
-        top: 65%;
-        left: 30%;
-    }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
     .navbar label {
         display: block;
         background: #000;
@@ -307,7 +287,7 @@ input {
         width: 30vw;
         height: 100%;
         background: #fff;
-        padding-top: 30vw;
+        padding-top: 20vw;
         padding-left: 2vw;
         display: flex;
         flex-direction: column;
@@ -315,7 +295,7 @@ input {
     }
 
     .menu__items li a {
-        color: #fd4a2b;
+        color: gray;
         font-size: 3vw;
         margin: 1vw 0;
     }
@@ -325,7 +305,6 @@ input {
     }
 
     .container {
-        padding-top: 6vw;
         flex-wrap: wrap;
         flex-direction: column;
         align-items: flex-start;
@@ -338,18 +317,18 @@ input {
     }
 
     .text__container h2 {
-        font-size: 10vw;
-        line-height: 10vw; 
+        font-size: 3rem;
+        width: 70vw;
     }
 
     .text__container h5 {
-        font-size: 4vw;
-        width: 55vw;
+        font-size: 3vw;
+        width: 70vw;
     }
 
     .text__container p {
-        font-size: 3vw;
-        width: 60vw;
+        font-size: 2vw;
+        width: 70vw;
         margin-top: 10px;
     }
 
@@ -361,7 +340,7 @@ input {
 
     .image__container {
         width: 100%;
-        height: 40rem;
+        height: 30rem;
         margin-top: -100px;
         overflow: hidden;
     }
@@ -369,21 +348,20 @@ input {
     .animation__blob {
         top: 50%;
         left: 50%;
-        width: 18rem;
-        height: 18rem;
+        width: 15rem;
+        height: 15rem;
     }
 
     .image__container .image__box {
-        height: 500px;
+        height: 200px;
         margin: 0;
     }
 
     .image__container .image__box img {
-        width: 80%;
-        height: 80%;
+        width: 100%;
         position: relative;
-        top: 10%;
-        left: 10%;
+        top: -40%;
+        left: 5%;
     }
 
     .icon {
@@ -406,5 +384,11 @@ input {
     ::-webkit-scrollbar-thumb {
         background-color: #fff;
         border-radius: 50px;
+    }
+}
+
+@media (max-width: 460px) {
+    .text__container h2 {
+        font-size: 2.3rem;
     }
 }

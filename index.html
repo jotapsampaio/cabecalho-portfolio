@@ -6,46 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
-    <link rel="stylesheet" href="style.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Cabeçalho portfolio</title>
   </head>
   <body>
-    <input type="checkbox" id="check">
+    <input type="checkbox" id="check" />
     <section>
       <div class="navbar">
-        <img src="./images/logo.png" alt="Logo da marca" class="logo">
+        <img src="./images/logo.png" alt="Logo da marca" class="logo" />
         <ol class="menu__items">
           <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre</a></li>
+          <li><a href="#sobre">Sobre</a></li>
           <li><a href="#">Serviços</a></li>
         </ol>
         <label for="check" class="fa fa-bars"></label>
       </div>
 
       <div class="container">
-        <div class="text__container">
-          <h2>vibes <br/> digital</h2>
-          <h5>Aumente suas vendas e gere conexões através do design e conteúdo estratégico.</h5>
+        <div class="text__container" id="sobre">
+          <h2>vibes digital</h2>
+          <h5>
+            Aumente suas vendas e gere conexões através do design e conteúdo
+            estratégico.
+          </h5>
           <p>
-            Todos os materiais são produzidos para marcas que buscam um design atraente e atrativo.
+            Todos os materiais são produzidos para marcas que buscam um design
+            atraente e atrativo.
           </p>
-          <a href="#" class="button">Contrate-me</a>
+          <a
+            href="http://api.whatsapp.com/send?1=pt_BR&phone=5588998656964"
+            target="_blank"
+            class="button"
+            >Contrate-me</a
+          >
         </div>
 
-          <div class="image__container">
-            <div class="image__box">
-              <img src="./images/foto-perfil.png" alt="foto de perfil"/>
-            </div>
-            <span class="animation__blob"></span>
+        <div class="image__container">
+          <div class="image__box">
+            <img src="./images/teste.png" alt="Logomarca" />
           </div>
-    
-          <div class="icon">
+          <span class="animation__blob"></span>
+        </div>
+
+        <div class="icon">
+          <a href="https://www.instagram.com/vibessdigitallsm/?igshid=YmMyMTA2M2Y%3D" target="_blank">
             <i class="fa fa-instagram"><span>Instagram</span></i>
-            <i class="fa fa-facebook"><span>Facebook</span></i>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank">
             <i class="fa fa-linkedin"><span>Linkedin</span></i>
-          </div>
+          </a>
+        </div>
       </div>
     </section>
   </body>
